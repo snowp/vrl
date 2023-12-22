@@ -20,6 +20,7 @@
     clippy::missing_errors_doc, // allowed in initial deny commit
     clippy::missing_panics_doc, // allowed in initial deny commit
     clippy::module_name_repetitions, // allowed in initial deny commit
+    clippy::mutable_key_type,
     clippy::needless_pass_by_value, // allowed in initial deny commit
     clippy::return_self_not_must_use, // allowed in initial deny commit
     clippy::semicolon_if_nothing_returned,  // allowed in initial deny commit
@@ -42,7 +43,7 @@ pub use expression_error::{ExpressionError, Resolved};
 pub use function::{Function, Parameter};
 pub use program::{Program, ProgramInfo};
 pub use state::{TypeInfo, TypeState};
-pub use target::{SecretTarget, Target, TargetValue, TargetValueRef};
+pub use target::{OwnedValueOrRef, SecretTarget, Target, TargetValue, TargetValueRef};
 pub use type_def::TypeDef;
 
 use crate::diagnostic::DiagnosticList;
