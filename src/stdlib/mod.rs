@@ -28,12 +28,17 @@
     clippy::trivially_copy_pass_by_ref, // allowed in initial deny commit
 )]
 
+#[cfg(feature = "stdlib")]
 pub use wasm_unsupported_function::WasmUnsupportedFunction;
 
+#[cfg(feature = "stdlib")]
 use crate::compiler::Function;
 
+#[cfg(feature = "stdlib")]
 mod string_utils;
+#[cfg(feature = "stdlib")]
 mod util;
+#[cfg(feature = "stdlib")]
 mod wasm_unsupported_function;
 
 cfg_if::cfg_if! {

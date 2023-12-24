@@ -165,7 +165,7 @@ stdlib = [
   "dep:snap",
 ]
 
-stdlib_lite = ["dep:regex"]
+stdlib_lite = ["dep:regex", "compiler"]
 
 [dependencies]
 cfg-if = "1.0.0"
