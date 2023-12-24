@@ -372,6 +372,9 @@ cfg_if::cfg_if! {
 
 cfg_if::cfg_if! {
     if #[cfg(feature = "stdlib_lite")] {
+        mod r#match;
+        mod match_any;
+
         pub use r#match::Match;
         pub use match_any::MatchAny;
     }
