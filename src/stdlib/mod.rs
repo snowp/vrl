@@ -365,6 +365,13 @@ cfg_if::cfg_if! {
     }
 }
 
+cfg_if::cfg_if! {
+    if #[cfg(feature = "stdlib-lite")] {
+        pub use r#match::Match;
+        pub use match_any::MatchAny;
+    }
+}
+
 #[cfg(feature = "stdlib")]
 #[must_use]
 pub fn all() -> Vec<Box<dyn Function>> {
